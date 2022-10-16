@@ -1,0 +1,38 @@
+[
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "title": "Playera para caballero",
+        "description": "Playera para caballero",
+        "price": "20.00",
+        "slug": "playera-para-caballero",
+        "image": "products/playera.jpg",
+        "created_at": "2021-10-29T15:19:34.061Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "title": "Playera para dama",
+        "description": "Playera para dama",
+        "price": "25.00",
+        "slug": "playera-para-dama",
+        "image": "products/playeradama01.jpg",
+        "created_at": "2021-10-29T15:30:09.999Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "title": "Linterna",
+        "description": "Linterna",
+        "price": "10.00",
+        "slug": "linterna",
+        "image": "products/linterna01.jpg",
+        "created_at": "2021-10-29T15:42:31.926Z"
+    }
+}
+]

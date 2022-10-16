@@ -1,0 +1,240 @@
+{% load static %}
+
+<title>Busqueda</title>
+<link href="{% static 'icons/uicons-bold-straight/css/uicons-bold-straight.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootsnav.css' %}" >	
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+{% include 'navbar.html' %} 
+<div class="col">
+    <div id="home" class="col" style="display: flex; justify-content: center; text-align:center ">
+        <div class="card">
+            <div class="card-body" style="background-color:#e99c2e; width:400px; height: 40px; ">
+                <div class="">
+                    <p style="color:white; padding: 6px; margin: 0px auto;max-width: 490%;min-width: 0px; text-align: center; font-weight:bold">
+                        <i class="fi fi-bs-arrow-alt-circle-right"></i> Todos los Resultados para: {{ query }} ({{ count }})</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p></p>
+
+    {% include 'products/snippets/list.html' %}  
+</div>
+
+<section id="populer-products" class="populer-products">
+    <div class="container">
+        <div class="populer-products-content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="single-populer-products">
+                        <div class="single-populer-product-img mt40">
+                            <img src="assets/images/populer-products/p1.png" alt="populer-products images">
+                        </div>
+                        <h2><a href="#">Hardware populares</a></h2>
+                        <div class="single-populer-products-para">
+                            <p>Nemo enim ipsam voluptatem quia volu ptas sit asperna aut odit aut fugit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single-populer-products">
+                        <div class="single-inner-populer-products">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="single-inner-populer-product-img">
+                                        <img src="assets/images/populer-products/p2.png" alt="populer-products images">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-sm-12">
+                                    <div class="single-inner-populer-product-txt">
+                                        <h2>
+                                            <a href="#">
+                                                Servicios presenciales <span>y</span> remotos
+                                            </a>
+                                        </h2>
+                                        <p>
+                                            Edi ut perspiciatis unde omnis iste natusina error sit voluptatem accusantium doloret mque laudantium, totam rem aperiam.
+                                        </p>
+                                        <div class="populer-products-price">
+                                            <h4>Precios accesibles desde <span>S/.10</span></h4>
+                                        </div>
+                                        <button class="btn-cart welcome-add-cart populer-products-btn" onclick="window.location.href='#'">
+                                            Descubir mas
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="single-populer-products">
+                        <div class="single-populer-products">
+                            <div class="single-populer-product-img">
+                                <img src="assets/images/populer-products/p3.png" alt="populer-products images">
+                            </div>
+                            <h2><a href="#">Nuestros mejores afiches</a></h2>
+                            <div class="single-populer-products-para">
+                                <p>Nemo enim ipsam voluptatem quia volu ptas sit asperna aut odit aut fugit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/.container-->
+
+</section>
+<div id="productos" class="col">
+    <p style="font-size:16px; text-align:center">Regrese al inicio para ver otro producto</p>                                
+    <br>
+                
+</div>
+<br>
+<p id="marcas" style="text-align:center; font-size:20px; font-weight:bold;">Marcas auspiciadoras</p>
+<section  class="clients">
+<div class="container">
+    <div class="owl-carousel owl-theme" id="client">
+            <div class="item">
+                <a href="#">
+                    <img src="#" alt="brand-image" />
+                </a>
+            </div><!--/.item-->
+            <div class="item">
+                <a href="#">
+                    <img src="#" alt="brand-image" />
+                </a>
+            </div><!--/.item-->
+            <div class="item">
+                <a href="#">
+                    <img src="#" alt="brand-image" />
+                </a>
+            </div><!--/.item-->
+            <div class="item">
+                <a href="#">
+                    <img src="#" alt="brand-image" />
+                </a>
+            </div><!--/.item-->
+            <div class="item">
+                <a href="#">
+                    <img src="#" alt="brand-image" />
+                </a>
+            </div><!--/.item-->
+        </div><!--/.owl-carousel-->
+
+</div><!--/.container-->
+
+</section>
+<section id="newsletter"  class="newsletter">
+<div class="container">
+    <div class="hm-footer-details">
+        <div class="row">
+            <div class=" col-md-3 col-sm-6 col-xs-12">
+                <div class="hm-footer-widget">
+                    <div class="hm-foot-title">
+                        <h4>information</h4>
+                    </div><!--/.hm-foot-title-->
+                    <div class="hm-foot-menu">
+                        <ul>
+                            <li><a href="#">about us</a></li><!--/li-->
+                            <li><a href="#">contact us</a></li><!--/li-->
+                            <li><a href="#">news</a></li><!--/li-->
+                            <li><a href="#">store</a></li><!--/li-->
+                        </ul><!--/ul-->
+                    </div><!--/.hm-foot-menu-->
+                </div><!--/.hm-footer-widget-->
+            </div><!--/.col-->
+            <div class=" col-md-3 col-sm-6 col-xs-12">
+                <div class="hm-footer-widget">
+                    <div class="hm-foot-title">
+                        <h4>collections</h4>
+                    </div><!--/.hm-foot-title-->
+                    <div class="hm-foot-menu">
+                        <ul>
+                            <li><a href="#">wooden chair</a></li><!--/li-->
+                            <li><a href="#">royal cloth sofa</a></li><!--/li-->
+                            <li><a href="#">accent chair</a></li><!--/li-->
+                            <li><a href="#">bed</a></li><!--/li-->
+                            <li><a href="#">hanging lamp</a></li><!--/li-->
+                        </ul><!--/ul-->
+                    </div><!--/.hm-foot-menu-->
+                </div><!--/.hm-footer-widget-->
+            </div><!--/.col-->
+            <div class=" col-md-3 col-sm-6 col-xs-12">
+                <div class="hm-footer-widget">
+                    <div class="hm-foot-title">
+                        <h4>my accounts</h4>
+                    </div><!--/.hm-foot-title-->
+                    <div class="hm-foot-menu">
+                        <ul>
+                            <li><a href="#">my account</a></li><!--/li-->
+                            <li><a href="#">wishlist</a></li><!--/li-->
+                            <li><a href="#">Community</a></li><!--/li-->
+                            <li><a href="#">order history</a></li><!--/li-->
+                            <li><a href="#">my cart</a></li><!--/li-->
+                        </ul><!--/ul-->
+                    </div><!--/.hm-foot-menu-->
+                </div><!--/.hm-footer-widget-->
+            </div><!--/.col-->
+            <div class=" col-md-3 col-sm-6  col-xs-12">
+                <div class="hm-footer-widget">
+                    <div class="hm-foot-title">
+                        <h4>Podemos ayudarte</h4>
+                    </div><!--/.hm-foot-title-->
+                    <div class="hm-foot-para">
+                        <p>
+                            Envianos un mensaje para atenderte e informarte.
+                        </p>
+                    </div><!--/.hm-foot-para-->
+                    <div class="hm-foot-email">
+                        <div class="foot-email-box">
+                            <input type="text" class="form-control" placeholder="Escribe lo que quieras decirnos" style="height:100px">
+                        </div><!--/.foot-email-box-->
+                        <div class="foot-email-subscribe">
+                            <span><i class="fa fa-location-arrow"></i></span>
+                        </div><!--/.foot-email-icon-->
+                    </div><!--/.hm-foot-email-->
+                </div><!--/.hm-footer-widget-->
+            </div><!--/.col-->
+        </div><!--/.row-->
+    </div><!--/.hm-footer-details-->
+
+</div><!--/.container-->
+
+</section>
+<footer id="footer"  class="footer">
+<div class="container">
+    <div class="hm-footer-copyright text-center">
+        <div class="footer-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>	
+            <a href="#"><i class="fa fa-instagram"></i></a>
+                
+        </div>
+        <p>
+            Avenida Giraldez, 742 Interior T-11 <a href="#" style="font-weight: bold;"> ACCEL INFORMATICOS</a>
+        </p><!--/p-->
+    </div><!--/.text-center-->
+</div><!--/.container-->
+
+<div id="scroll-Top" style="text-align: center;">
+    <div class="return-to-top">
+        <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+    </div>
+    
+</div><!--/.scroll-Top-->
+
+</footer>
+<script src="{% static 'js/jquery.js' %}"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootsnav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{% static 'js/custom.js' %}"></script>

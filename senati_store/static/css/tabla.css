@@ -1,0 +1,28 @@
+
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+table {
+  background-color: rgb(173, 116, 10);
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(53, 28, 7, 0.1);
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: rgb(54, 9, 9);
+}
+
+th {
+	text-align: left;
+}
+

@@ -1,0 +1,1 @@
+console.log("Hola SENATI desde el main.js")

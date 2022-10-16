@@ -1,0 +1,35 @@
+{% load product_extras %}
+{% load static %}
+
+<link href="{% static 'icons/uicons-bold-straight/css/uicons-bold-straight.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootsnav.css' %}" >	
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+<div class="single-new-arrival">
+    <div class="single-new-arrival-bg">
+        {% if product.image %}
+        <img src="{{ product.image.url }}" alt="new-arrivals images" style="height:200px">
+        {% endif %}
+        <div class="single-new-arrival-bg-overlay"></div>
+        <div class="new-arrival-cart">
+        </div>
+    </div>
+    <h4><a href="{% url 'products:product' product.slug %}">{{ product.title }}</a></h4>
+    <p class="arrival-product-price" style="color:red; font-weight:bold;">{{ product.price | price_format }}</p>
+</div>
+
+
+
+<script src="{% static 'js/jquery.js' %}"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootsnav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{% static 'js/custom.js' %}"></script>

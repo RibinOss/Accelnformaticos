@@ -1,0 +1,97 @@
+{% load static %}
+{% url 'login' as login %}
+{% url 'register' as register %}
+{% url 'logout' as logout %}
+{% url 'carts:cart' as cart %}
+
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+            <!-- Start Navigation -->
+            <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000" style="background-color:white;">
+
+                <!-- Start Top Search -->
+                <div class="top-search">
+                    <div class="container">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fi fi-bs-search"></i></i></span>
+                            {% include 'products/snippets/search.html' %}
+                            <span class="input-group-addon close-search"><i class="fi fi-bs-cross"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Top Search -->
+                <div class="container">            
+                    <!-- Start Atribute Navigation -->
+                    <div class="attr-nav">
+                        <ul>
+                            <li class="search">
+                                <a href="#"><i class="fi fi-bs-search"></i></a>
+                            </li><!--/.search-->
+                        
+                            <li class="nav-setting">
+                                <a href="{{ cart }}" class="nav-link{% if request.path == cart %}active{% endif %}"><i class="fi fi-bs-shopping-cart"></i></a>
+                            </li>
+                            
+
+                            <!--/.search-->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                                    <i class="fi fi-bs-user"></i>
+                                    
+                                </a>
+                                <ul class="dropdown-menu cart-list s-cate" style="text-align: center;">
+                                    {% if user.is_authenticated %}
+                                    
+                                    <li class="total">
+                                        <button class="btn-cart welcome-add-cart" style="width: 190px;" onclick="window.location.href='{{ logout }}'">
+                                            Cerrar <span></span> sesion
+                                        </button>
+                                    </li>
+                                       
+                                    {% else %}
+                                    <br>
+                                    <p style="font-size:16px">inicie sesion o registrese para poder agregar al carrito</p>
+                                    <li class="total">
+
+                                        <button class="btn-cart welcome-add-cart {% if request.path == login %}active{% endif %}" style="width: 190px;" onclick="window.location.href='{{ login }}'">
+                                            Iniciar <span></span> sesion
+                                        </button>             
+                                    </li>
+                                    <li class="total">
+                        
+                                        <button class="btn-cart welcome-add-cart {% if request.path == register %}active{% endif %}" style="width: 190px;" onclick="window.location.href='{{ register }}'">
+                                            Registrarse <span></span>
+                                        </button>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                            </li><!--/.dropdown-->
+                        </ul>
+                    </div><!--/.attr-nav-->
+                    <!-- End Atribute Navigation -->
+                    <!-- Start Header Navigation -->
+
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" style="height:40px;" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fi fi-bs-menu-burger"></i>
+                        </button>
+                        <a class="navbar-brand" href="{% url 'index' %}">ACCEL<span>Informaticos</span>.</a>
+                    </div><!--/.navbar-header-->
+                    <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu" style="background-color:white;">
+                        <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
+                            <li class="scroll active"><a href="#home">Inicio</a></li>
+                            <li class="scroll"><a href="#productos">Productos</a></li>
+                            <li class="scroll"><a href="#feature">Destacados</a></li>
+                            <li class="scroll"><a href="#marcas">Marcas</a></li>
+                            <li class="scroll"><a href="#newsletter">Contactos</a></li>
+                        </ul><!--/.nav -->
+                    </div>
+                    <!-- End Header Navigation -->
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <!-- /.navbar-collapse -->
+                </div><!--/.container-->
+            </nav><!--/nav-->
+
+
+
+        

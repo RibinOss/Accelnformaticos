@@ -1,0 +1,21 @@
+
+    <div class="container">
+        <div class="section-header">
+            <h2>Todos nuestros productos</h2>
+        </div>
+        <div class="new-arrivals-content">
+            <div class="row">
+                {% for object in products %}
+                <div class="col-md-3 col-sm-4">
+                    {% include 'products/snippets/product.html' with product=object %}
+                </div>
+                {% endfor %}             
+            </div>
+        </div>
+    </div>
+
+    
+ <!--/.container-->
+
+
+ 

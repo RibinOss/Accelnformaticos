@@ -1,0 +1,14 @@
+
+{% block titulo %} 
+    Resultado de la Búsqueda
+{% endblock %}
+
+    <div class="col">
+
+        {% include 'products/snippets/search.html' %}
+       
+        <hr>
+        <p>Resultados para: {{ query }} ({{ count }})</p>
+
+        {% include 'products/snippets/list.html' %}  
+    </div>

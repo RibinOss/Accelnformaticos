@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'icons/uicons-bold-straight/css/uicons-bold-straight.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootsnav.css' %}" >	
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    
+    
+    <script src="https://kit.fontawesome.com/e36d389dc5.js" crossorigin="anonymous"></script>
+    <title>
+        {% block titulo %}
+        {% endblock %}
+    </title>
+</head>
+<body>   
+    {% include 'navbar.html' %} 
+        <header style="margin-top:-80px">
+            {% block content2 %}
+            {% endblock %}
+            {% block content %}
+            {% endblock %}
+        </header>
+    
+</body>
+
+<script src="{% static 'js/jquery.js' %}"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'js/bootsnav.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+
+</html>
