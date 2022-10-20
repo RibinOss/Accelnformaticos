@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="section-header">
+        <h2>Todos los productos en esta categoria</h2>
+    </div>
+    <div class="new-arrivals-content">
+        <div class="row">
+            {% for object in categories %}
+            <div class="col-md-3 col-sm-4">
+                {% include 'categories/snippets/category.html' with category=object %}
+            </div>
+            {% endfor %}             
+        </div>
+    </div>
+</div>

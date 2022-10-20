@@ -31,17 +31,17 @@
                                             <div class="welcome-hero-txt">
                                                 
                                                 <h4>Vea nuestras categorias</h4>
-                                                <h2>Todos nuestros hardware ahora</h2>
+                                                <h2>Todas nuestras impresoras ahora</h2>
                                                 <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuiana smod tempor  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. 
+                                                    dispositivo periférico de salida del ordenador que permite producir una gama permanente de textos o gráficos de documentos almacenados en un formato electrónico. 
                                                 </p>
                                                 <div class="packages-price">
                                                     <p>
-                                                        precios desde S/.500
+                                                        precios desde S/.585.00
                                                         <del>Antes S/.700</del>
                                                     </p>
                                                 </div>
-                                                <button class="btn-cart welcome-add-cart" onclick="window.location.href='#'">
+                                                <button class="btn-cart welcome-add-cart" onclick="window.location.href='http://127.0.0.1:8000/productos/search?q=impresoras'">
                                                     <i class="fi fi-bs-eye" style="margin-right:5px"></i>
                                                     Ver <span>la</span> categoria
                                                 </button>
@@ -54,7 +54,7 @@
                                     <div class="col-sm-5">
                                         <div class="single-welcome-hero">
                                             <div class="welcome-hero-img">
-                                                <img src="assets/images/slider/slider1.png" alt="slider image">
+                                                <img src="{% static 'images/categoria_1.jpg' %}" alt="slider image">
                                             </div><!--/.welcome-hero-txt-->
                                         </div><!--/.single-welcome-hero-->
                                     </div><!--/.col-->
@@ -222,7 +222,8 @@
         <div id="productos" class="col">
             <p style="font-size:16px; text-align:center">Tiene que iniciar sesion para poder agregar al carrito y hacer el pedido porfavor</p>                                
             <br>
-            {% include 'products/snippets/list.html' %}                
+            {% include 'products/snippets/list.html' %} 
+                           
     </div>
     <br>
     <p id="marcas" style="text-align:center; font-size:20px; font-weight:bold;">Marcas auspiciadoras</p>

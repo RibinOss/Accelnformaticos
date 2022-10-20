@@ -1,0 +1,17 @@
+<div class="single-new-arrival">
+    <div class="single-new-arrival-bg">
+        <img src="{{ product.image.url }}" alt="new-arrivals images">
+        <div class="single-new-arrival-bg-overlay"></div>
+        <div class="sale bg-2">
+            <p>Venta</p>
+        </div>
+        <div class="new-arrival-cart">
+            <p>
+                <i class="fi fi-bs-shopping-bag-add"></i>
+                <a href="{% url 'products:product' product.slug %}">Agregar <span>al </span> carrito</a>
+            </p>
+        </div>
+    </div>
+    <h4><a href="{% url 'products:product' product.slug %}">{{ product.title }}</a></h4>
+    <p class="arrival-product-price">S/.{{ product.price}}</p>
+</div>
